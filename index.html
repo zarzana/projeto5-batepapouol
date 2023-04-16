@@ -6,7 +6,22 @@
     <link rel="stylesheet" href="style.css" />
     <meta charset="UTF-8" />
     <title>Bate-papo UOL</title>
-    <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
-  <body></body>
+  <body>
+    <div class="top-bar">
+      <img src="./assets/logo.png">
+      <ion-icon name="people"></ion-icon>
+    </div>
+    <div class="chat-content"></div>
+    <div class="input-bar">
+        <input class="message-input" type="text">
+        <ion-icon class="send-button" name="paper-plane-outline"></ion-icon>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
