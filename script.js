@@ -106,10 +106,18 @@ function sendMessage () {
         const data = {from: username, to: 'Todos', text: userMessage, type: 'message'};
     
         const messagePromisse = axios.post('https://mock-api.driven.com.br/api/vm/uol/messages', data);
-        messagePromisse.then(getMessages);
+        messagePromisse.then(refreshChat);
         messagePromisse.catch(window.location.reload);
 
         document.querySelector('input').value='';
 
     }
 }
+
+function refreshChat () {
+
+    getMessages();
+    document.querySelector('input').value='';
+
+}
+
