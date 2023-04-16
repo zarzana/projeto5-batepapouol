@@ -23,22 +23,12 @@ function userLogin () {
 
 }
 
-function getMessages (response) {
-
-    if (response.status == 200) {
+function getMessages () {
 
         const chatPromise = axios.get('https://mock-api.driven.com.br/api/vm/uol/messages');
         chatPromise.then(setMessagesGlobal);
 
         renderChat();
-
-    }
-
-    else {
-
-        userLogin()
-
-    }
 
 }
 
