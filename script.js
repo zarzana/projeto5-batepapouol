@@ -107,7 +107,6 @@ function sendMessage () {
     
         const messagePromisse = axios.post('https://mock-api.driven.com.br/api/vm/uol/messages', data);
         messagePromisse.then(refreshChat);
-        messagePromisse.catch(window.location.reload);
 
         document.querySelector('input').value='';
 
