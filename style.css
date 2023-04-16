@@ -84,6 +84,17 @@ time { font-weight: 500; color: #AAAAAA; }
 .send-button {
     height: 26px;
     width: 26px;
+    padding: 0;
+    margin: 0;
     margin-right: 18px;
     margin-top: 27px;
+    border: none;
+    background-color: none;
+    background: none;
+    color: none;
+}
+
+.send-button ion-icon {
+    height: 26px;
+    width: 26px;
 }
