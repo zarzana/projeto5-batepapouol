@@ -15,26 +15,10 @@ function userLogin () {
     var usernameData = {name: username}
 
     const usernamePromise = axios.post('https://mock-api.driven.com.br/api/vm/uol/participants', usernameData);
-    usernamePromise.then(loginStatusHandler);
+    usernamePromise.then(getMessages);
     usernamePromise.catch(userLogin);
 
-}
-
-function loginStatusHandler (response) {
-
-    if (response.status == 200) {
-
-        getMessages()
-        setInterval(() => {const usernamePromise = axios.post('https://mock-api.driven.com.br/api/vm/uol/status', data)}, 5000);
-        setInterval(getMessages, 3000);
-
-    }
-
-    else {
-
-        userLogin()
-        
-    }
+    setInterval(() => {const usernamePromise = axios.post('https://mock-api.driven.com.br/api/vm/uol/status', data)}, 5000);
 
 }
 
@@ -44,6 +28,8 @@ function getMessages () {
         chatPromise.then(setMessagesGlobal);
 
         renderChat();
+
+        setInterval(getMessages, 3000);
 
 }
 
