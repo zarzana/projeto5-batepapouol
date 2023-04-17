@@ -19,6 +19,7 @@ function userLogin () {
     usernamePromise.catch(userLogin);
 
     setInterval(() => {const usernamePromise = axios.post('https://mock-api.driven.com.br/api/vm/uol/status', data)}, 5000);
+    setInterval(getMessages, 3000);
 
 }
 
@@ -28,8 +29,6 @@ function getMessages () {
         chatPromise.then(setMessagesGlobal);
 
         renderChat();
-
-        setInterval(getMessages, 3000);
 
 }
 
